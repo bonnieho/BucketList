@@ -1,0 +1,39 @@
+/* The following styles are homegrown; intended to supplement Bootstrap's CDN content with my own customization. */
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+
+/*
+
+
+
+    font-family: 'Goudy Bookletter 1911', serif;
+
+    font-family: 'IM Fell DW Pica', serif;
+
+    font-family: 'IM Fell DW Pica SC', serif;
+
+    font-family: 'IM Fell Double Pica', serif;
+
+    font-family: 'IM Fell English SC', serif;
+
+
+*/

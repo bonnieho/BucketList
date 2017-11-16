@@ -1,0 +1,84 @@
+<h1>My Bucket List</h1>
+
+<h2>What's still to do...</h2>
+
+<ol>
+  {{#each bucket}}
+    {{#unless this.done}}
+      {{#unless this.again}}
+        <li>
+          {{this.item}}
+
+          <form action="/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="done" value="1">
+            <input type="hidden" name="again" value="0">
+            <button type="submit">DONE!</button>
+          </form>
+
+          {{> bucket/delete-bucket}}
+
+        </li>
+      {{/unless}}
+    {{/unless}}
+  {{/each}}
+</ol>
+
+<h2>Stuff I've done...</h2>
+
+<ul>
+  {{#each bucket}}
+    {{#if this.done}}
+      <li>
+        {{this.item}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="done" value="0">
+          <input type="hidden" name="again" value="1">
+          <button type="submit">Again?</button>
+        </form>
+
+        {{> bucket/delete-bucket}} 
+
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+<h2>Hey, that was fun - let's do it again!</h2>
+
+<ul>
+  {{#each bucket}}
+    {{#if this.again}}
+      <li>
+        {{this.item}}
+          <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="done" value="1">
+          <input type="hidden" name="again" value="0">
+          <button type="submit">DONE!</button>
+        </form>
+
+        {{> bucket/delete-bucket}} 
+
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a bucket list item that you'd like to do</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="newItem">Item:</label>
+    <input type="text" id="newItem" name="item">
+  </div>
+
+  <div class="form-group">
+    <label for="didItem">Done?</label><br>
+    <input type="radio" name="done" value="0" checked> Still to do<br />
+    <input type="radio" name="done" value="1">Done?
+    <input type="hidden" name="again" value="0">
+  </div>
+
+  <button type="submit">Add Bucket Item</button>
+</form>

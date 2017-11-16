@@ -1,0 +1,9 @@
+ <!-- passing in the id of the bucket list item inside the form. First method is DELETE, but in order for the delete to 'stick', it has to be followed with a POST method. -->
+ <!-- Note: the value in the hidden input for the delete button needs to be dynamic just like the route in the form's opening tag attribute. That way, the route AND the value of the record being deleted match. -->
+ 
+ 
+  <form action="/{{this.id}}?_method=DELETE" method="POST">
+  	<input type="hidden" name="id" value="{{this.id}}">
+  	<button type="submit">Delete item</button>
+  </form>
+
