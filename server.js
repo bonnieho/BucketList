@@ -3,9 +3,9 @@ var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var path = require("path");
 
-var port = 3000;
-
 var app = express();
+// Sets an initial port. We'll use this later in our listener
+var port = process.env.PORT || 3000;
 
 // Don't forget that "public" directory holds all static content.
 app.use(express.static("public"));
@@ -44,4 +44,12 @@ var routes = require("./controllers/bucketController.js");
 
 app.use("/", routes);
 
-app.listen(port);
+
+// =============================================================================
+// LISTENER
+// The below code effectively "starts" our server
+// =============================================================================
+
+app.listen(port, function() {
+  console.log("App listening on PORT: " + port);
+});
