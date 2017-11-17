@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>z39v9iqmhh32avpr</string>
+			<key>host</key>
+			<string>kavfu5f7pido12mr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com</string>
+			<key>name</key>
+			<string>me7hj6qhf0h47on6@kavfu5f7pido12mr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com</string>
+			<key>port</key>
+			<integer>3306</integer>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>me7hj6qhf0h47on6</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeAClJpZNIeHy0uXxAPTlNN
+			dXRhYmxlU3RyaW5noy0vI1hOU1N0cmluZ9IeHzEyXk5TTXV0YWJs
+			ZUFycmF5ozEzI1dOU0FycmF50h4fIjWiIiNfEA9OU0tleWVkQXJj
+			aGl2ZXLRODlUZGF0YYABAAgAEQAaACMALQAyADcARQBLAFIAWgBl
+			AGwAcAByAHQAdgB6AHwAfgCAAIIAhwCMAJEAugDBAMIAwwDFAMoA
+			1QDeAPQA+AEFAQ4BEwEVARcBGQEeASgBKgEtATIBRAFIAVEBVgFl
+			AWkBcQF2AXkBiwGOAZMAAAAAAAACAQAAAAAAAAA6AAAAAAAAAAAA
+			AAAAAAABlQ==
+			</data>
+			<key>contentSortCol</key>
+			<string>createdAt</string>
+			<key>contentSortColIsAsc</key>
+			<false/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {600, 710}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>DROP DATABASE IF EXISTS bucket_db;
+CREATE DATABASE bucket_db;
+
+USE bucket_db;
+
+
+CREATE TABLE bucket_list
+(
+	id int NOT NULL AUTO_INCREMENT,
+	item varchar(255) NOT NULL,
+	done BOOLEAN DEFAULT false,
+	again BOOLEAN DEFAULT false,
+	PRIMARY KEY (id)
+);
+
+INSERT INTO bucket_list (item) VALUES ('Sail the Seven Seas');
+INSERT INTO bucket_list (item) VALUES ('Learn a New Language');
+INSERT INTO bucket_list (item, done) VALUES ('Sky Diving', 1);
+INSERT INTO bucket_list (item, done) VALUES ('Rocky Mountain Climbing', 1);
+INSERT INTO bucket_list (item, done) VALUES ('2.7 seconds with a bull named Fu Manchu', 1);
+INSERT INTO bucket_list (item) VALUES ('Visit Antarctica');
+
+
+
+CREATE TABLE todos (
+	id INT AUTO_INCREMENT NOT NULL,
+	description VARCHAR(255),
+	createdAt TIMESTAMP NOT NULL,
+	PRIMARY KEY(id)
+);</string>
+			<key>table</key>
+			<string>todos</string>
+			<key>view</key>
+			<string>SP_VIEW_STRUCTURE</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>200</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>CREATE TABLE todos (
+	id INT AUTO_INCREMENT NOT NULL,
+	description VARCHAR(255),
+	createdAt TIMESTAMP NOT NULL,
+	PRIMARY KEY(id)
+)</string>
+		<string>DROP DATABASE IF EXISTS bucket_db;
+CREATE DATABASE bucket_db;
+USE bucket_db;
+CREATE TABLE bucket_list
+(
+	id int NOT NULL AUTO_INCREMENT,
+	item varchar(255) NOT NULL,
+	done BOOLEAN DEFAULT false,
+	again BOOLEAN DEFAULT false,
+	PRIMARY KEY (id)
+);
+INSERT INTO bucket_list (item) VALUES ('Sail the Seven Seas');
+INSERT INTO bucket_list (item) VALUES ('Learn a New Language');
+INSERT INTO bucket_list (item, done) VALUES ('Sky Diving', 1);
+INSERT INTO bucket_list (item, done) VALUES ('Rocky Mountain Climbing', 1);
+INSERT INTO bucket_list (item, done) VALUES ('2.7 seconds with a bull named Fu Manchu', 1);
+INSERT INTO bucket_list (item) VALUES ('Visit Antarctica')</string>
+		<string>INSERT INTO bucket_list (item) VALUES ('Sail the Seven Seas');
+INSERT INTO bucket_list (item) VALUES ('Learn a New Language');
+INSERT INTO bucket_list (item, done) VALUES ('Sky Diving', 1);
+INSERT INTO bucket_list (item, done) VALUES ('Rocky Mountain Climbing', 1);
+INSERT INTO bucket_list (item, done) VALUES ('2.7 seconds with a bull named Fu Manchu', 1);
+INSERT INTO bucket_list (item) VALUES ('Visit Antarctica')</string>
+		<string>DROP DATABASE IF EXISTS bucket_db;
+CREATE DATABASE bucket_db;
+USE bucket_db;
+CREATE TABLE bucket_list
+(
+	id int NOT NULL AUTO_INCREMENT,
+	item varchar(255) NOT NULL,
+	done BOOLEAN DEFAULT false,
+	again BOOLEAN DEFAULT false,
+	PRIMARY KEY (id)
+)</string>
+		<string>DROP DATABASE IF EXISTS bucket_db;
+CREATE DATABASE bucket_db;
+USE bucket_db;
+CREATE TABLE bucket_list
+(
+	id int NOT NULL AUTO_INCREMENT,
+	item varchar(255) NOT NULL,
+	done int DEFAULT 0,
+	again int DEFAULT 0,
+	PRIMARY KEY (id)
+)</string>
+		<string>DROP DATABASE IF EXISTS bucket_db;
+CREATE DATABASE bucket_db;
+USE bucket_db;
+CREATE TABLE bucket_list
+(
+	id int NOT NULL AUTO_INCREMENT,
+	item varchar(255) NOT NULL,
+	done int DEFAULT 0,
+	PRIMARY KEY (id)
+);
+INSERT INTO bucket_list (item) VALUES ('Sail the Seven Seas');
+INSERT INTO bucket_list (item) VALUES ('Learn a New Language');
+INSERT INTO bucket_list (item, done) VALUES ('Sky Diving', 1);
+INSERT INTO bucket_list (item, done) VALUES ('Rocky Mountain Climbing', 1);
+INSERT INTO bucket_list (item, done) VALUES ('2.7 seconds with a bull named Fu Manchu', 1);
+INSERT INTO bucket_list (item) VALUES ('Visit Antarctica')</string>
+		<string>DROP DATABASE IF EXISTS bucket_db;
+CREATE DATABASE bucket_db;
+USE bucket_db;
+CREATE TABLE bucket_list
+(
+	id int NOT NULL AUTO_INCREMENT,
+	item varchar(255) NOT NULL,
+	done int DEFAULT 0,
+	again varchar(255),
+	PRIMARY KEY (id)
+)</string>
+		<string>DROP DATABASE IF EXISTS bucket_db;
+CREATE DATABASE bucket_db;
+USE bucket_db;
+CREATE TABLE bucket_list
+(
+	id int NOT NULL AUTO_INCREMENT,
+	item varchar(255) NOT NULL,
+	done BOOLEAN DEFAULT false,
+	again varchar(255),
+	PRIMARY KEY (id)
+);
+INSERT INTO bucket_list (item) VALUES ('Sail the Seven Seas');
+INSERT INTO bucket_list (item) VALUES ('Learn a New Language');
+INSERT INTO bucket_list (item, done) VALUES ('Sky Diving', true);
+INSERT INTO bucket_list (item, done) VALUES ('Rocky Mountain Climbing', true);
+INSERT INTO bucket_list (item, done) VALUES ('2.7 seconds with a bull named Fu Manchu', true);
+INSERT INTO bucket_list (item) VALUES ('Visit Antarctica')</string>
+		<string>DROP DATABASE IF EXISTS bucket_db;
+CREATE DATABASE bucket_db;
+USE bucket_db;
+CREATE TABLE bucket_list
+(
+	id int NOT NULL AUTO_INCREMENT,
+	item varchar(255) NOT NULL,
+	done BOOLEAN DEFAULT false,
+	again varchar(255)
+	PRIMARY KEY (id)
+)</string>
+		<string>INSERT INTO bucket_list (item) VALUES ('Sail the Seven Seas');
+INSERT INTO bucket_list (item) VALUES ('Learn a New Language');
+INSERT INTO bucket_list (item, done) VALUES ('Sky Diving', true);
+INSERT INTO bucket_list (item, done) VALUES ('Rocky Mountain Climbing', true);
+INSERT INTO bucket_list (item, done) VALUES ('2.7 seconds with a bull named Fu Manchu', true);
+INSERT INTO bucket_list (item) VALUES ('Visit Antarctica')</string>
+		<string>DROP DATABASE IF EXISTS bucket_db;
+CREATE DATABASE bucket_db;
+USE bucket_db;
+CREATE TABLE bucket_list
+(
+	id int NOT NULL AUTO_INCREMENT,
+	item varchar(255) NOT NULL,
+	done BOOLEAN DEFAULT false,
+	PRIMARY KEY (id)
+)</string>
+		<string>CREATE DATABASE cat_db;
+USE cat_db;
+CREATE TABLE cats
+(
+	id int NOT NULL AUTO_INCREMENT,
+	name varchar(255) NOT NULL,
+	sleepy BOOLEAN DEFAULT false,
+	PRIMARY KEY (id)
+);
+INSERT INTO cats (name) VALUES ('Meeses');
+INSERT INTO cats (name) VALUES ('Bobbi');
+INSERT INTO cats (name, sleepy) VALUES ('Sylvester', true);
+INSERT INTO cats (name, sleepy) VALUES ('Marilyn Manson', true);
+INSERT INTO cats (name, sleepy) VALUES ('Joe Biden', true);
+INSERT INTO cats (name) VALUES ('Owens')</string>
+		<string>INSERT INTO personDetails(image, age, gender, ethinicity, glasses)
+VALUES(".public/images/bill.jpg", 55, "male", "white", TRUE);
+INSERT INTO personDetails(image, age, gender, ethinicity, glasses)
+VALUES(".public/images/satya.jpg", 50, "male", "asian", TRUE);
+select * from personDetails;
+-- Add Comment</string>
+		<string>DROP DATABASE IF EXISTS civilface_DB;
+CREATE DATABASE civilface_DB;
+USE civilface_DB;
+CREATE TABLE personDetails(
+person_id INT NOT NULL AUTO_INCREMENT,
+image TEXT,
+age INT,
+gender VARCHAR(20),
+ethinicity VARCHAR(100),
+glasses BOOLEAN,
+PRIMARY KEY (person_id))</string>
+		<string>SELECT departments.department_id, departments.department_name, departments.over_head_costs
+ , 
+ CASE
+ 	WHEN SUM(products.product_sales) IS NULL
+ 	THEN 0
+ 	ELSE SUM(products.product_sales)
+ END AS product_sales
+FROM departments 
+LEFT JOIN products ON departments.department_name=products.department_name
+GROUP BY departments.department_id, departments.department_name</string>
+		<string>SELECT departments.department_id, departments.department_name, departments.over_head_costs
+ , SUM(products.product_sales) AS product_sales 
+FROM departments 
+LEFT JOIN products ON departments.department_name=products.department_name
+GROUP BY departments.department_id, departments.department_name</string>
+		<string>SELECT departments.department_id, departments.department_name, departments.over_head_costs
+ , SUM (products.product_sales) AS product_sales 
+FROM departments 
+LEFT JOIN products ON departments.department_name=products.department_name
+GROUP BY departments.department_id, departments.department_name</string>
+		<string>SELECT departments.department_id, departments.department_name, departments.over_head_costs
+-- , SUM (products.product_sales) AS product_sales 
+FROM departments 
+LEFT JOIN products ON departments.department_name=products.department_name
+GROUP BY departments.department_id, departments.department_name</string>
+		<string>SELECT departments.department_id, departments.department_name, departments.over_head_costs
+-- , SUM (products.product_sales) AS product_sales 
+FROM departments 
+JOIN products ON departments.department_name=products.department_name
+-- GROUP BY departments.department_id, departments.department_name;</string>
+		<string>SELECT departments.department_id, departments.department_name, departments.over_head_costs
+-- , SUM (products.product_sales) AS product_sales 
+FROM departments 
+JOIN products ON departments.department_name=products.department_name
+GROUP BY departments.department_id, departments.department_name</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.19-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

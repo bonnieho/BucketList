@@ -96,30 +96,33 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 
 
-  * In `models`, make a `burger.js` file.
 
-    * Inside `burger.js`, import `orm.js` into `burger.js`
 
-    * Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
 
-    * Export at the end of the `burger.js` file.
+  * In `models`, make a `bucket.js` file.
+
+    * Inside `bucket.js`, import `orm.js` into `bucket.js`
+
+    * Also inside `bucket.js`, create the code that will call the ORM functions using burger specific input for the ORM.
+
+    * Export at the end of the `bucket.js` file.
 
 #### Controller setup
 
-1. Inside your `burger` directory, create a folder named `controllers`.
+1. Inside your `bucket` directory, create a folder named `controllers`.
 
-2. In `controllers`, create the `burgers_controller.js` file.
+2. In `controllers`, create the `bucket_controller.js` file.
 
-3. Inside the `burgers_controller.js` file, import the following:
+3. Inside the `bucket_controller.js` file, import the following:
 
    * Express
-   * `burger.js`
+   * `bucket.js`
 
 4. Create the `router` for the app, and export the `router` at the end of your file.
 
 #### View setup
 
-1. Inside your `burger` directory, create a folder named `views`.
+1. Inside your `bucket` directory, create a folder named `views`.
 
    * Create the `index.handlebars` file inside `views` directory.
 
@@ -144,14 +147,14 @@ All the recommended files and directories from the steps above should look like 
 │   └── orm.js
 │ 
 ├── controllers
-│   └── burgers_controller.js
+│   └── bucket_controller.js
 │
 ├── db
 │   ├── schema.sql
 │   └── seeds.sql
 │
 ├── models
-│   └── burger.js
+│   └── bucket.js
 │ 
 ├── node_modules
 │ 
@@ -160,9 +163,9 @@ All the recommended files and directories from the steps above should look like 
 ├── public
 │   ├── assets
 │   │   ├── css
-│   │   │   └── burger_style.css
+│   │   │   └── style.css
 │   │   └── img
-│   │       └── burger.png
+│   │       └── xxxxxxxxx burger.png
 │   └── test.html
 │
 ├── server.js
@@ -176,13 +179,6 @@ All the recommended files and directories from the steps above should look like 
 
 
 - - -
-
-### Hosting on Heroku
-
-Now that we have a backend to our applications, we use Heroku for hosting. Please note that while **Heroku is free**, it will request credit card information if you have more than 5 applications at a time or are adding a database. 
-
-Please see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details. 
-
 
 
 
