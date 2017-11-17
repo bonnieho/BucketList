@@ -89,40 +89,40 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
    * The ORM object was then exported in `module.exports`.
 
 
-
 #### Model setup
 
 * Inside the `BucketList` directory, a folder named `models` was created.
 
+  * In `models`, a file called `bucket.js` was created.
 
+    * `orm.js` was imported into the `bucket.js` file.
 
+    * Inside `bucket.js`, code was created that calls the ORM functions using input that's specific to bucket list tasks.
 
+    * Included the export at the end of the `bucket.js` file.
 
-
-  * In `models`, make a `bucket.js` file.
-
-    * Inside `bucket.js`, import `orm.js` into `bucket.js`
-
-    * Also inside `bucket.js`, create the code that will call the ORM functions using burger specific input for the ORM.
-
-    * Export at the end of the `bucket.js` file.
 
 #### Controller setup
 
-1. Inside your `bucket` directory, create a folder named `controllers`.
+1. Inside the `bucket` directory, a folder named `controllers` was created.
 
-2. In `controllers`, create the `bucket_controller.js` file.
+2. In `controllers`, a file called `bucket_controller.js` was created.
 
-3. Inside the `bucket_controller.js` file, import the following:
+3. Inside the `bucket_controller.js` file, the following were imported:
 
    * Express
    * `bucket.js`
 
-4. Create the `router` for the app, and export the `router` at the end of your file.
+4. The `router` was then created for the app, and exported at the end of the file.
+
+
 
 #### View setup
 
-1. Inside your `bucket` directory, create a folder named `views`.
+1. Inside the `bucket` directory, folder named `views` was created.
+
+
+
 
    * Create the `index.handlebars` file inside `views` directory.
 
@@ -136,6 +136,8 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
      * Create a button in `index.handlebars` that will submit the user input into the database.
 
+
+
 #### Directory structure
 
 All the recommended files and directories from the steps above should look like the following structure:
@@ -147,7 +149,7 @@ All the recommended files and directories from the steps above should look like 
 │   └── orm.js
 │ 
 ├── controllers
-│   └── bucket_controller.js
+│   └── bucketController.js
 │
 ├── db
 │   ├── schema.sql
@@ -161,19 +163,27 @@ All the recommended files and directories from the steps above should look like 
 ├── package.json
 │
 ├── public
+│   │
 │   ├── assets
 │   │   ├── css
+│   │   │   ├── reset.css
 │   │   │   └── style.css
-│   │   └── img
-│   │       └── xxxxxxxxx burger.png
-│   └── test.html
+│   │   └── images
+│   │       └── (multiple images)
+│   └── test.html ??????
 │
 ├── server.js
 │
 └── views
     ├── index.handlebars
-    └── layouts
-        └── main.handlebars
+    │
+    ├── layouts
+    │   └── main.handlebars
+    │
+    └── partials
+          └── bucket
+              └── delete-bucket.handlebars
+
 ```
 
 
