@@ -1,25 +1,76 @@
 /* The following styles are homegrown; intended to supplement Bootstrap's CDN content with my own customization. */
+body {
+	color: #666;
+	font-family: 'IM Fell DW Pica';
+}
 
 li {
-  padding: 5px;
+  padding: 6px 12px;
   margin: 5px;
-  background: #faebd7;
+  /* background: #faebd7;  kind of a peachy color */
+  border: 1px solid #ccc;
+  font-size: 120%;
+}
+
+.form-group {
+  margin-bottom: 6px;
+  font-size: 120%;
+}
+
+.form-group li {
+ font-size: 120%;
+}
+
+.item button {
+  display: inline;
+  font-size: 80%;
+}
+
+
+
+.create-update-form {
+  padding: 12px 12px;
+  margin: 6px;
+  /* background: aqua; */
+  border: 2px solid #ccc;
 }
 
 .label {
   font-weight: bold;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+.create-update-form button {
+	font-size: 120%;
 }
 
-.form-group {
-  margin-bottom: 5px;
+
+p {
+	text-align: center;
 }
 
+
+label {
+	font-weight: normal;
+}
+
+h1 {
+
+	font-family: 'IM Fell DW Pica';
+	font-size: 300%;
+	 /* font-family: 'Goudy Bookletter 1911', serif; 
+
+	font-family: 'IM Fell DW Pica', serif; kind of pirate-y
+
+    font-family: 'IM Fell DW Pica SC', serif; OLDER kind of pirate-y 
+
+    font-family: 'IM Fell Double Pica', serif; brighter, cleaner 
+
+    font-family: 'IM Fell English SC', serif; REALLY pirate-y smallcaps */
+}
+
+h2 {
+
+	font-family: 'IM Fell DW Pica';
 
 /*
 
