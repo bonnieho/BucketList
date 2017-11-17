@@ -1,4 +1,4 @@
-# BucketList - an excerise showcasing Node.js, Express, and Handlebars
+# BucketList - an exercise showcasing Node.js, Express, and Handlebars
 
 ### Overview
 
