@@ -19,7 +19,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 * **(Bonus feature that I've added to my project)** Additionally, I've added a third list where a user can decide that if they enjoyed a specific completed task enough, they can click an accomplanying button associated with that task and choose to move it to a third list for activities that were enjoyable enough to do again.
 
-
+- - - 
 
 #### App Setup
 
@@ -80,19 +80,21 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
    * The `connection.js` was set as a required import into `orm.js` file.
 
-   
-
-   * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
+   * In the `orm.js` file, methods were created that will execute the necessary MySQL commands in the controllers. These are the methods that are used to retrieve and store data in the database.
 
      * `selectAll()` 
      * `insertOne()` 
      * `updateOne()` 
 
-   * Export the ORM object in `module.exports`.
+   * The ORM object was then exported in `module.exports`.
+
+
 
 #### Model setup
 
-* Inside your `burger` directory, create a folder named `models`.
+* Inside the `BucketList` directory, a folder named `models` was created.
+
+
 
   * In `models`, make a `burger.js` file.
 
