@@ -12,3 +12,6 @@ CREATE TABLE bucket_list
 	again BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
+
+
+-- * **date**: a TIMESTAMP.

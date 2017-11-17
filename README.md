@@ -33,7 +33,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 5. Installed the *Handlebars npm package* using: `npm install express-handlebars --save`.
 
-6. Installed the *method-override npm package* using: `npm install method-override --save`.
+6. Installed the *method-override npm package* using: `npm install method-override --save`. *(This lets us use the DELETE method in the form tag's action attribute.)*
 
 7. Installed the *body-parser npm package* using: `npm install body-parser --save`.
 
@@ -48,21 +48,24 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 #### DB Setup
 
-1. Inside your `burger` directory, create a folder named `db`.
+1. A folder named `db` was created in the `BucketList` directory.
 
-2. In the `db` folder, create a file named `schema.sql`. Write SQL queries this file that do the following:
+2. In the `db` folder, a `schema.sql` file was created to initialize the one table (`bucket_list`) in this `bucket_db` database. Th following SQL queries are contained in this schema filed:
 
-   * Create the `burgers_db`.
-   * Switch to or use the `burgers_db`.
-   * Create a `burgers` table with these fields:
+   * Created the `bucket_db`.
+   * Switch to or use the `bucket_db`.
+   * Created a `bucket_list` table with these fields:
      * **id**: an auto incrementing int that serves as the primary key.
-     * **burger_name**: a string.
-     * **devoured**: a boolean.
-     * **date**: a TIMESTAMP.
+     * **item**: a string.
+     * **done**: a boolean.
+     * **again**: a boolean.
 
-3. Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
+3. Also in the `db` folder, a `seeds.sql` file was created. In this file, insert queries are written to populate the `bucket_list` table with several entries including some that have marked as having already been accomplished.
 
-4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
+4. Both `schema.sql` and `seeds.sql` files were run from the command line to initialize the database in the mysql server.
+
+
+
 
 5. Now you're going to run these SQL files. 
 
@@ -189,4 +192,16 @@ Now that we have a backend to our applications, we use Heroku for hosting. Pleas
 
 Please see [Heroku’s Account Verification Information](https://devcenter.heroku.com/articles/account-verification) for more details. 
 
+
+
+
+
+
+
+- - - 
+
+
+(c)2017 __Bonnie Lynne Hoffman__ 
+
+*toward the completion of The University of Texas at Austin Houston Coding Boot Camp Certificate - (June 2017 cohort)*
 
