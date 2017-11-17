@@ -14,18 +14,17 @@ if (process.env.JAWSDB_URL) {
 };
 
 // Connecting the dots - this was used when connecting locally
-/*
+
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
+    console.log(process.env.JAWSDB_URL);
     return;
   }
   console.log("connected as id " + connection.threadId);
 });
 
-*/
 
-connection.connect();
 
 // Export connection for ORM to use.
 module.exports = connection;
