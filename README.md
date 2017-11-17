@@ -53,7 +53,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 2. In the `db` folder, a `schema.sql` file was created to initialize the one table (`bucket_list`) in this `bucket_db` database. Th following SQL queries are contained in this schema filed:
 
    * Created the `bucket_db`.
-   * Switch to or use the `bucket_db`.
+   * Allows for switching to or using the `bucket_db`.
    * Created a `bucket_list` table with these fields:
      * **id**: an auto incrementing int that serves as the primary key.
      * **item**: a string.
@@ -65,33 +65,22 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 4. Both `schema.sql` and `seeds.sql` files were run from the command line to initialize the database in the mysql server.
 
 
-
-
-5. Now you're going to run these SQL files. 
-
-   * Make sure you're in the `db` folder of your app.
-
-   * Start MySQL command line tool and login: `mysql -u root -p`.
-
-   * With the `mysql>` command line tool running, enter the command `source schema.sql`. This will run your schema file and all of the queries in it -- in other words, you'll be creating your database.
-
-   * Now insert the entries you defined in `seeds.sql` by running the file: `source seeds.sql`.
-
-   * Close out of the MySQL command line tool: `exit`.
-
 #### Config Setup
 
-1. Inside your `burger` directory, create a folder named `config`.
+1. Inside the `BucketList` directory, afolder named `config` was created.
 
-2. Create a `connection.js` file inside `config` directory.
+2. A `connection.js` file was created inside the `config` directory.
 
-   * Inside the `connection.js` file, setup the code to connect Node to MySQL.
+   * Inside the `connection.js` file, code was set up to connect Node to MySQL.
 
-   * Export the connection.
+   * That new connection was then exported.
 
-3. Create an `orm.js` file inside `config` directory.
 
-   * Import (require) `connection.js` into `orm.js`
+3. An `orm.js` file was created inside the `config` directory.
+
+   * The `connection.js` was set as a required import into `orm.js` file.
+
+   
 
    * In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 
