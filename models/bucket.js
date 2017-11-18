@@ -28,6 +28,5 @@ var bucket = {
   }
 };
 
-
 // Export the database functions for the controller. In this case, it's the bucket list controller.
 module.exports = bucket;

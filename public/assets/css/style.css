@@ -1,4 +1,5 @@
 /* The following styles are homegrown; intended to supplement Bootstrap's CDN content with my own customization. */
+
 body {
 	color: #666;
 	font-family: 'IM Fell DW Pica';
@@ -6,7 +7,38 @@ body {
 	background-image: url(../images/White-handmade-paper-texture-or-background-Stock-Photo.jpg);
 }
 
-li {
+h1, h2 {
+	font-family: 'IM Fell DW Pica';
+	text-align: center;
+	 /* font-family: 'Goudy Bookletter 1911', serif; 
+	font-family: 'IM Fell DW Pica', serif; kind of pirate-y
+    font-family: 'IM Fell DW Pica SC', serif; OLDER kind of pirate-y 
+    font-family: 'IM Fell Double Pica', serif; brighter, cleaner 
+    font-family: 'IM Fell English SC', serif; REALLY pirate-y smallcaps */
+}
+
+h1 {
+	font-size: 400%;
+}
+
+
+p {
+	text-align: center;
+}
+
+
+.ital {
+	font-style: italic;
+}
+
+.footer {
+	font-size: 80%;
+}
+
+
+/* the list items are what makes up the form-group divs belows */
+
+li { 
   padding: 6px 12px;
   margin: 5px;
   /* background: #faebd7;  kind of a peachy color */
@@ -14,6 +46,10 @@ li {
   font-size: 120%;
   background-color: #fff;
 }
+
+
+
+/* =====  This class holds all of the list items for "left to do", "done", and "do it again" item groupings  ===== */
 
 .form-group {
   margin-bottom: 6px;
@@ -30,7 +66,12 @@ li {
   font-size: 80%;
 }
 
+/* ==== END form-group  ===== */
 
+
+
+
+/* =====  This class is for the new bucket item ENTRY section  ====== */
 
 .create-update-form {
   padding: 12px 12px 12px 24px;
@@ -40,73 +81,19 @@ li {
   background-color: #fff;
 }
 
-.label {
-  font-weight: bold;
-}
-
 .create-update-form button {
 	font-size: 120%;
 }
-
-
-p {
-	text-align: center;
-}
-
 
 label {
 	font-weight: normal;
 }
 
-h1 {
-
-	font-family: 'IM Fell DW Pica';
-	font-size: 400%;
-	text-align: center;
-	 /* font-family: 'Goudy Bookletter 1911', serif; 
-
-	font-family: 'IM Fell DW Pica', serif; kind of pirate-y
-
-    font-family: 'IM Fell DW Pica SC', serif; OLDER kind of pirate-y 
-
-    font-family: 'IM Fell Double Pica', serif; brighter, cleaner 
-
-    font-family: 'IM Fell English SC', serif; REALLY pirate-y smallcaps */
-}
-
-h2 {
-
-	font-family: 'IM Fell DW Pica';
-	text-align: center;
-
-/*
+/* ==== END create-update-form  ===== */
 
 
 
-    font-family: 'Goudy Bookletter 1911', serif;
 
-    font-family: 'IM Fell DW Pica', serif;
-
-    font-family: 'IM Fell DW Pica SC', serif;
-
-    font-family: 'IM Fell Double Pica', serif;
-
-    font-family: 'IM Fell English SC', serif;
-
-
-*/
-}
-
-
-.ital {
-	font-style: italic;
-}
-
-
-
-.footer {
-	font-size: 80%;
-}
 
 
 /*==================================================

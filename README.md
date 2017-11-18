@@ -1,4 +1,5 @@
 # BucketList - an exercise showcasing Node.js, Express, and Handlebars
+Published site: [https://bonnieho-bucketlist.herokuapp.com/](https://bonnieho-bucketlist.herokuapp.com/)
 
 ### Overview
 
@@ -164,13 +165,12 @@ All the recommended files and directories from the steps above should look like 
 │
 ├── public
 │   │
-│   ├── assets
-│   │   ├── css
-│   │   │   ├── reset.css
-│   │   │   └── style.css
-│   │   └── images
-│   │       └── (multiple images)
-│   └── test.html ??????
+│   └── assets
+│       ├── css
+│       │   ├── reset.css
+│       │   └── style.css
+│       └── images
+│           └── (multiple images)
 │
 ├── server.js
 │
