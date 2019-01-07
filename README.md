@@ -194,7 +194,9 @@ All the recommended files and directories from the steps above should look like 
 
 - - -
 
+MVPs to look at:
 
+1. check vulnerable dependencies with Heroku (maybe look at what files do not need to be commited to GH)
 
 
 
