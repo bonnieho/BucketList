@@ -68,7 +68,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 #### Config Setup
 
-1. Inside the `BucketList` directory, afolder named `config` was created.
+1. Inside the `BucketList` directory, a folder named `config` was created.
 
 2. A `connection.js` file was created inside the `config` directory.
 
@@ -123,7 +123,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 1. Inside the `bucket` directory, folder named `views` was created.
 
 
+- - - 
 
+EDIT below here:
+
+- - -
 
    * Create the `index.handlebars` file inside `views` directory.
 
