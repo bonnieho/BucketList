@@ -9,13 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "deep-extend": "^0.6.0",
-    "express": "^4.16.2",
+    "express": "^4.16.4",
     "express-handlebars": "^2.0.1",
     "handlebars": "^4.1.0",
     "method-override": "^2.3.10",
-    "mysql": "^2.15.0",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7",
     "uglify-js": "^3.4.9"
   },
   "devDependencies": {
