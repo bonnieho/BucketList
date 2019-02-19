@@ -1,4 +1,5 @@
 # BucketList - an exercise showcasing Node.js, Express, and Handlebars
+
 Published site: [https://bonnieho-bucketlist.herokuapp.com/](https://bonnieho-bucketlist.herokuapp.com/)
 
 ### Overview
@@ -199,6 +200,33 @@ MVPs to look at:
 1. check vulnerable dependencies with Heroku (maybe look at what files do not need to be commited to GH)
 
 
+- - -
+
+### In case you're interested...
+
+Again, you can interact with this application in real-time at the following address: [https://bonnieho-bucketlist.herokuapp.com/](https://bonnieho-bucketlist.herokuapp.com/), however, if you'd prefer to take it out for a spin on your local machine, keep reading.
+
+
+#### Local Environment Setup
+
+To use this version of "BucketList" from your own local environment, here's what you've got to do:
+
+**Step 1 - Clone this repo in the command line below using the following text:**
+```
+git clone https://github.com/bonnieho/BucketList.git
+```
+**Step 2 - In you local directory structure, navigate into the newly cloned repo directory:**
+```
+cd BucketList
+```
+**Step 3 - Install the required NPM packages using the following command:**
+```
+npm install
+```
+**Step 4 - Start the application server using the following command:**
+```
+node server.js
+```
 
 
 - - - 

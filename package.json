@@ -12,8 +12,10 @@
     "body-parser": "^1.18.3",
     "deep-extend": "^0.6.0",
     "express": "^4.16.4",
-    "express-handlebars": "^2.0.1",
+    "express-handlebars": "^3.0.0",
+    "graceful-fs": "^4.1.15",
     "handlebars": "^4.1.0",
+    "handlebars-helper-css": "^0.1.0",
     "lodash": "^4.17.11",
     "method-override": "^2.3.10",
     "minimatch": "^3.0.4",
@@ -22,7 +24,5 @@
     "uglify-js": "^3.4.9",
     "underscore.string": "^3.3.5"
   },
-  "devDependencies": {
-    "handlebars-helper-css": "^0.1.0"
-  }
+  "devDependencies": {}
 }
