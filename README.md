@@ -204,7 +204,7 @@ MVPs to look at:
 
 ### In case you're interested...
 
-Again, you can interact with this application in real-time at the following address:   [https://bonnieho-bucketlist.herokuapp.com/](https://bonnieho-bucketlist.herokuapp.com/), however, if you'd prefer to take it out for a spin on your local machine, keep reading.
+Again, you can interact with this application in real-time at the following address:<br />[https://bonnieho-bucketlist.herokuapp.com/](https://bonnieho-bucketlist.herokuapp.com/), however, if you'd prefer to take it out for a spin on your local machine, keep reading.
 
 
 #### Local Environment Setup
