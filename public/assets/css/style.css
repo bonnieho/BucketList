@@ -2,44 +2,40 @@
 
 
 /* <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Caveat|Cedarville+Cursive|La+Belle+Aurore|Nothing+You+Could+Do" rel="stylesheet">
-
 font-family: 'Nothing You Could Do', cursive;
-
 font-family: 'Caveat', cursive;
-
 font-family: 'Cedarville Cursive', cursive;
-
 */
 body {
-	color: #333;
-	margin-bottom: 48px;
-	background-image: url(../images/cork-board.jpg);
+  color: #333;
+  margin-bottom: 48px;
+  background-image: url(../images/cork-board.jpg);
 }
 
 h1, h2 {
   font-family: 'Cutive Mono', monospace;
   letter-spacing: -3px;
   font-weight: bold;
-	text-align: center;
+  text-align: center;
 }
 
 h1 {
-	font-size: 400%;
+  font-size: 400%;
 }
 
 
 p {
-	text-align: center;
+  text-align: center;
 }
 
 
 .ital {
-	font-style: italic;
+  font-style: italic;
 }
 
 .footer {
   font-family: 'IM Fell DW Pica';
-	font-size: 80%;
+  font-size: 80%;
   padding-top: 2em;
   padding-bottom: 1em;
   background-image: url(/assets/images/notebook_paper_halfwide.png);
@@ -128,13 +124,13 @@ li {
 .create-update-form button {
   font-family: 'Cutive Mono', monospace;
   letter-spacing: -1px;
-	font-size: 120%;
+  font-size: 120%;
   margin-top: 12px;
 }
 
 label {
   font-family: 'Cutive Mono', monospace;
-	font-weight: normal;
+  font-weight: normal;
 }
 
 /* ==== END create-update-form  ===== */
@@ -152,65 +148,64 @@ label {
 
     /* Custom, iPhone Retina */ 
     @media only screen and (min-width : 320px) {
-  		.row-top {
-  			min-height: 54px;
-  		}
+      .row-top {
+        min-height: 54px;
+      }
     }
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (min-width : 480px) {
-  		.row-top {
-  			min-height: 86px;
-  		}
+      .row-top {
+        min-height: 86px;
+      }
     }
 
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) {
-  		.row-top {
-  			min-height: 128px;
-  		}
+      .row-top {
+        min-height: 128px;
+      }
     }
 
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
-		/* already ok at this size */
+    /* already ok at this size */
     }
 
     /* Large Devices, Wide Screens */
     @media only screen and (min-width : 1200px) {
-		/* already this size */
+    /* already this size */
     }
 
     /*==========  Non-Mobile First Method  ==========*/
 
     /* Large Devices, Wide Screens */
     @media only screen and (max-width : 1200px) {
-		/* already ok at this size */
+    /* already ok at this size */
     }
 
     /* Medium Devices, Desktops */
     @media only screen and (max-width : 992px) {
-		/* already this size */
+    /* already this size */
     }
 
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
-  		.row-top {
-  			min-height: 128px;
-  		}
+      .row-top {
+        min-height: 128px;
+      }
     }
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 480px) {
-  		.row-top {
-  			min-height: 86px;
-  		}
+      .row-top {
+        min-height: 86px;
+      }
     }
 
     /* Custom, iPhone Retina */ 
     @media only screen and (max-width : 320px) {
-  		.row-top {
-  			min-height: 54px;
-  		}
-    }
-
+      .row-top {
+        min-height: 54px;
+      }
+}
