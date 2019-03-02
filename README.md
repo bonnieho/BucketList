@@ -1,10 +1,11 @@
 # BucketList - an exercise showcasing Node.js, Express, and Handlebars
+## (a.k.a. "Eat-Da-Burger")
 
 Published site: [https://bonnieho-bucketlist.herokuapp.com/](https://bonnieho-bucketlist.herokuapp.com/)
 
 ### Overview
 
-This original task assigned was to create a "burger logger" to enter a customized burger into a list and then have whichever burger you specify to "devour" transfer to an "eaten" list through the use of Node and mySQL to route that data and update the underlying database. No html files are to be harmed here as Handlebars is the technology called upon to render the resulting pages based on a series of templates as linked views.
+The original assigned task was to create a "burger logger" (WTH?!?) to enter a customized burger into a list and then have whichever burger you specify to be "devoured" (read: being transfered to an "eaten" list). This was to be done through the use of Node and mySQL to route that data and update the underlying database. No html files were to be harmed as Handlebars is the technology called upon to render the resulting pages based on a series of templates as linked views.
 
 Since the entire cohort was tasked with this same exercise, I wanted to have something more unique to show as exemplary of my ability to implement the same MVC design patten using the homegrown ORM needed for this assignment. So, I improvised and applied the same requirements into a different type of list to categorize - a "bucket" list.
 
@@ -13,19 +14,21 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 * BucketList is a listing app that lets users input items that they'd like to accomplish at some point in their lives.
 
-* When a user submits an item that they'd like to accomplish, it will display those tasks on the left side of the page, waiting to be accomplished.
+* When a user submits an item that they'd like to accomplish, it will display that task on the left side of the page in a container labeled "What's still to do", waiting to be accomplished.
 
-* Each task in the Bucket List area also has a `Done!` button. When the user clicks it, the item will move to the right side of the page, into a completed list.
+* Each task in the Bucket List area also has a `Done!` button. When the user clicks it, the item will move to the right side of the page, into a list of completed tasks (a container labeled "Stuff I've done").
 
 * The app stores every task in a database, whether completed or not.
 
-* **(Bonus feature that I've added to my project)** Additionally, I've added a third list where a user can decide that if they enjoyed a specific completed task enough, they can click an accomplanying button associated with that task and choose to move it to a third list for activities that were enjoyable enough to do again.
+* **(Bonus feature that I've added to my project)** Additionally, I've added a third list where a user can decide that if they enjoyed a specific completed task enough, they can click an accomplanying button associated with that task and choose to move it to a third list for activities that were enjoyable enough to do again (a container called "Hey, that was fun - let's do it again!").
+
+(screenshot of BucketList page)
 
 - - - 
 
-#### App Setup
+#### App setup steps
 
-1. `BucketList` GitHub repo intialized.
+1. `BucketList` GitHub repo was intialized.
 
 2. A *package.json* file was created by running `npm init`.
 
@@ -48,26 +51,26 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 
 
-#### DB Setup
+#### DB setup steps
 
 1. A folder named `db` was created in the `BucketList` directory.
 
-2. In the `db` folder, a `schema.sql` file was created to initialize the one table (`bucket_list`) in this `bucket_db` database. Th following SQL queries are contained in this schema filed:
+2. In the `db` folder, a `schema.sql` file was created to initialize the one table (`bucket_list`) in this `bucket_db` database. The following SQL queries are contained in this schema file:
 
    * Created the `bucket_db`.
-   * Allows for switching to or using the `bucket_db`.
+   ```* Allows for switching to or using the `bucket_db`.```
    * Created a `bucket_list` table with these fields:
      * **id**: an auto incrementing int that serves as the primary key.
      * **item**: a string.
      * **done**: a boolean.
      * **again**: a boolean.
 
-3. Also in the `db` folder, a `seeds.sql` file was created. In this file, insert queries are written to populate the `bucket_list` table with several entries including some that have marked as having already been accomplished.
+3. Also in the `db` folder, a `seeds.sql` file was created. In this file, insert queries were written to populate the `bucket_list` table with several entries including some that have marked as having already been accomplished.
 
 4. Both `schema.sql` and `seeds.sql` files were run from the command line to initialize the database in the mysql server.
 
 
-#### Config Setup
+#### Config setup steps
 
 1. Inside the `BucketList` directory, a folder named `config` was created.
 
@@ -91,11 +94,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
    * The ORM object was then exported in `module.exports`.
 
 
-#### Model setup
+#### Model setup steps
 
-* Inside the `BucketList` directory, a folder named `models` was created.
+1. Inside the `BucketList` directory, a folder named `models` was created.
 
-  * In `models`, a file called `bucket.js` was created.
+2. In `models`, a file called `bucket.js` was created.
 
     * `orm.js` was imported into the `bucket.js` file.
 
@@ -104,7 +107,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
     * Included the export at the end of the `bucket.js` file.
 
 
-#### Controller setup
+#### Controller setup steps
 
 1. Inside the `bucket` directory, a folder named `controllers` was created.
 
@@ -112,7 +115,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 3. Inside the `bucket_controller.js` file, the following were imported:
 
-   * Express
+   ```* Express```
    * `bucket.js`
 
 4. The `router` was then created for the app, and exported at the end of the file.
@@ -121,32 +124,34 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 #### View setup
 
-1. Inside the `bucket` directory, folder named `views` was created.
+1. Inside the `bucket` directory, a folder named `views` was created.
+
+2. Inside the `views` directory, the following were created:
+
+    * a file called `index.handlebars`
+    * a directory named `layouts`
+
+3. Inside the `layouts` folder, a `main.handlebars` file was initialized.
+
+4. Configuration of the handlebars files:
+    
+        * `main.handlebars` was set up so it's able to be used by Handlebars:
+        ```
+        ...
+        <body>
+          {{{ body }}}
+        </body>
+        ...
+        ```
+        * `index.handlebars` was set up to contain the template the Handlebars uses, *including* a button that submits the user's input into the database.
 
 
 - - - 
 
-EDIT below here:
-
-- - -
-
-   * Create the `index.handlebars` file inside `views` directory.
-
-   * Create the `layouts` directory inside `views` directory.
-
-     * Create the `main.handlebars` file inside `layouts` directory.
-
-     * Setup the `main.handlebars` file so it's able to be used by Handlebars.
-
-     * Setup the `index.handlebars` to have the template that Handlebars can render onto.
-
-     * Create a button in `index.handlebars` that will submit the user input into the database.
-
-
 
 #### Directory structure
 
-All the recommended files and directories from the steps above should look like the following structure:
+The resulting files and directories make up the following structure:
 
 ```
 .
@@ -190,8 +195,6 @@ All the recommended files and directories from the steps above should look like 
               └── delete-bucket.handlebars
 
 ```
-
-
 
 - - -
 

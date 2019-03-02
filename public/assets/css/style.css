@@ -10,6 +10,8 @@ body {
   color: #333;
   margin-bottom: 48px;
   background-image: url(../images/cork-board.jpg);
+  /* the following prevents the horizontal scroll bar */
+  overflow-x: hidden;
 }
 
 h1, h2 {
