@@ -53,30 +53,30 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 #### DB setup steps
 
-1. A folder named `db` was created in the `BucketList` directory.
+1. A folder named **db** was created in the **BucketList** directory.
 
-2. In the `db` folder, a `schema.sql` file was created to initialize the one table (`bucket_list`) in this `bucket_db` database. The following SQL queries are contained in this schema file:
+2. In the **db** folder, a **schema.sql** file was created to initialize the one table (*bucket_list*) in this `bucket_db` database. The following SQL queries are contained in this schema file:
 
    * Created the `bucket_db`.
    ```* Allows for switching to or using the `bucket_db`.```
-   * Created a `bucket_list` table with these fields:
+   * Created a *bucket_list* table with these fields:
      * **id**: an auto incrementing int that serves as the primary key.
      * **item**: a string.
      * **done**: a boolean.
      * **again**: a boolean.
 
-3. Also in the `db` folder, a `seeds.sql` file was created. In this file, insert queries were written to populate the `bucket_list` table with several entries including some that have marked as having already been accomplished.
+3. Also in the **db** folder, a **seeds.sql** file was created. In this file, insert queries were written to populate the *bucket_list* table with several entries including some that have marked as having already been accomplished.
 
-4. Both `schema.sql` and `seeds.sql` files were run from the command line to initialize the database in the mysql server.
+4. Both **schema.sql** and **seeds.sql** files were run from the command line to initialize the database in the mysql server.
 
 
 #### Config setup steps
 
-1. Inside the `BucketList` directory, a folder named `config` was created.
+1. Inside the **BucketList** directory, a folder named **config** was created.
 
-2. A `connection.js` file was created inside the `config` directory.
+2. A **connection.js** file was created inside the **config** directory.
 
-   * Inside the `connection.js` file, code was set up to connect Node to MySQL.
+   * Inside the **connection.js** file, code was set up to connect Node to MySQL.
    
 ```
     var mysql = require("mysql");
@@ -103,11 +103,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 ```
 
 
-3. An `orm.js` file was created inside the `config` directory.
+3. An **orm.js** file was created inside the **config** directory.
 
-   * The `connection.js` was set as a required import into `orm.js` file.
+   * The **connection.js** was set as a required import into **orm.js** file.
 
-   * In the `orm.js` file, methods were created that will execute the necessary MySQL commands in the controllers. (These are the methods that were used?) to retrieve and store data in the database.
+   * In the **orm.js** file, methods were created that will execute the necessary MySQL commands in the controllers. (These are the methods that were used?) to retrieve and store data in the database.
 
      * `selectAll()` 
 
