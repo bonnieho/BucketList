@@ -77,21 +77,119 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 2. A `connection.js` file was created inside the `config` directory.
 
    * Inside the `connection.js` file, code was set up to connect Node to MySQL.
+   
+   ```
+    var mysql = require("mysql");
+    var connection;
+
+    if (process.env.JAWSDB_URL) {
+      connection = mysql.createConnection(process.env.JAWSDB_URL);
+    } else {
+      connection = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "-------",
+        database: "-------"
+      });
+    };
+```
 
    * That new connection was then exported.
+
+   ```
+    // Export connection for ORM to use.
+    module.exports = connection;
+```
 
 
 3. An `orm.js` file was created inside the `config` directory.
 
    * The `connection.js` was set as a required import into `orm.js` file.
 
-   * In the `orm.js` file, methods were created that will execute the necessary MySQL commands in the controllers. These are the methods that are used to retrieve and store data in the database.
+   * In the `orm.js` file, methods were created that will execute the necessary MySQL commands in the controllers. (These are the methods that were used?) to retrieve and store data in the database.
 
      * `selectAll()` 
+
+    ```
+  all: function(tableInput, cb) {
+    var queryString = "SELECT * FROM " + tableInput + ";";
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
+  ``` 
      * `insertOne()` 
+
+     ```
+  create: function(table, cols, vals, cb) {
+      var queryString = "INSERT INTO " + table;
+
+      queryString += " (";
+      queryString += cols.toString();
+      queryString += ") ";
+      queryString += "VALUES (";
+      queryString += printQuestionMarks(vals.length);
+      queryString += ") ";
+
+      console.log("just created new record in ORM");
+      console.log(queryString);
+
+      connection.query(queryString, vals, function(err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result);
+      });
+    },
+  ```
      * `updateOne()` 
 
+     ```
+  update: function(table, objColVals, condition, cb) {
+    var queryString = "UPDATE " + table;
+
+    queryString += " SET ";
+    queryString += objToSql(objColVals);
+    queryString += " WHERE ";
+    queryString += condition;
+
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+  ```
+
+  * I've also included a delete..
+
+  ```
+delete: function(table, condition, cb) {
+    var queryString = "DELETE FROM " + table;
+    queryString += " WHERE ";
+    queryString += condition;
+
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  }
+  ```
+
    * The ORM object was then exported in `module.exports`.
+
+
+
 
 
 #### Model setup steps
@@ -107,6 +205,8 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
     * Included the export at the end of the `bucket.js` file.
 
 
+
+
 #### Controller setup steps
 
 1. Inside the `bucket` directory, a folder named `controllers` was created.
@@ -119,6 +219,9 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
    * `bucket.js`
 
 4. The `router` was then created for the app, and exported at the end of the file.
+
+
+
 
 
 
