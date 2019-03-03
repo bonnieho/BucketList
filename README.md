@@ -112,7 +112,8 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
      * `selectAll()` 
 
-`
+```
+    
     all: function(tableInput, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
       connection.query(queryString, function(err, result) {
@@ -122,12 +123,12 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
-` 
-   
-     * `insertOne()` 
 
+```  
+     * `insertOne()` 
 ```
-  create: function(table, cols, vals, cb) {
+    
+    create: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table;
 
       queryString += " (";
@@ -147,48 +148,47 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
+
 ```
      * `updateOne()` 
+```
+    
+    update: function(table, objColVals, condition, cb) {
+      var queryString = "UPDATE " + table;
+
+      queryString += " SET ";
+      queryString += objToSql(objColVals);
+      queryString += " WHERE ";
+      queryString += condition;
+
+      console.log(queryString);
+      connection.query(queryString, function(err, result) {
+        if (err) {
+         throw err;
+        }
+        cb(result);
+      });
+    },
 
 ```
-  update: function(table, objColVals, condition, cb) {
-    var queryString = "UPDATE " + table;
-
-    queryString += " SET ";
-    queryString += objToSql(objColVals);
-    queryString += " WHERE ";
-    queryString += condition;
-
-    console.log(queryString);
-    connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-
-      cb(result);
-    });
-  },
+    * I've also included a delete..
 ```
+    
+    delete: function(table, condition, cb) {
+      var queryString = "DELETE FROM " + table;
+      queryString += " WHERE ";
+      queryString += condition;
 
-  * I've also included a delete..
+      console.log(queryString);
+      connection.query(queryString, function(err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result);
+      });
+    }
 
 ```
-delete: function(table, condition, cb) {
-    var queryString = "DELETE FROM " + table;
-    queryString += " WHERE ";
-    queryString += condition;
-
-    console.log(queryString);
-    connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-
-      cb(result);
-    });
-  }
-```
-
    * The ORM object was then exported in `module.exports`.
 
 
@@ -241,7 +241,7 @@ delete: function(table, condition, cb) {
 
 4. Configuration of the handlebars files:
     
-        * **main.handlebars** was set up so it's able to be used by Handlebars:
+    * **main.handlebars** was set up so it's able to be used by Handlebars:
 ```
         ...
         <body>
@@ -249,7 +249,7 @@ delete: function(table, condition, cb) {
         </body>
         ...
 ```
-        * **index.handlebars** was set up to contain the template that Handlebars uses, *including* a button that submits the user's input into the database.
+    * **index.handlebars** was set up to contain the template that Handlebars uses, *including* a button that submits the user's input into the database.
 
 
 - - - 
