@@ -49,7 +49,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
    * *method-override*
    * *body-parser*
 
-
+&#160;
 
 #### DB setup steps
 
@@ -69,6 +69,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 4. Both **schema.sql** and **seeds.sql** files were run from the command line to initialize the database in the mysql server.
 
+&#160;
 
 #### Config setup steps
 
@@ -92,7 +93,6 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         database: "-------"
       });
     };
-
 ```
 
    * That new connection was then exported.
@@ -102,6 +102,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
     module.exports = connection;
 ```
 
+&#160;
 
 3. An **orm.js** file was created inside the **config** directory.
 
@@ -111,17 +112,18 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
      * `selectAll()` 
 
-```
-  all: function(tableInput, cb) {
-    var queryString = "SELECT * FROM " + tableInput + ";";
-    connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-      cb(result);
-    });
-  },
-``` 
+`
+    all: function(tableInput, cb) {
+      var queryString = "SELECT * FROM " + tableInput + ";";
+      connection.query(queryString, function(err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result);
+      });
+    },
+` 
+   
      * `insertOne()` 
 
 ```
@@ -190,56 +192,56 @@ delete: function(table, condition, cb) {
    * The ORM object was then exported in `module.exports`.
 
 
-
+&#160;
 
 
 #### Model setup steps
 
-1. Inside the `BucketList` directory, a folder named `models` was created.
+1. Inside the **BucketList** directory, a folder named **models** was created.
 
-2. In `models`, a file called `bucket.js` was created.
+2. In **models**, a file called **bucket.js** was created.
 
-    * `orm.js` was imported into the `bucket.js` file.
+    * **orm.js** was imported into the **bucket.js** file.
 
-    * Inside `bucket.js`, code was created that calls the ORM functions using input that's specific to bucket list tasks.
+    * Inside **bucket.js**, code was created that calls the ORM functions using input that's specific to bucket list tasks.
 
-    * Included the export at the end of the `bucket.js` file.
+    * Included the export at the end of the **bucket.js** file.
 
-
+&#160;
 
 
 #### Controller setup steps
 
-1. Inside the `bucket` directory, a folder named `controllers` was created.
+1. Inside the **bucket** directory, a folder named **controllers** was created.
 
-2. In `controllers`, a file called `bucket_controller.js` was created.
+2. In **controllers**, a file called **bucket_controller.js** was created.
 
-3. Inside the `bucket_controller.js` file, the following were imported:
+3. Inside the **bucket_controller.js** file, the following were imported:
 
-   ```* Express```
-   * `bucket.js`
+   * `Express`...
+   * **bucket.js**
 
-4. The `router` was then created for the app, and exported at the end of the file.
+4. The **router** was then created for the app, and exported at the end of the file.
 
-
+&#160;
 
 
 
 
 #### View setup
 
-1. Inside the `bucket` directory, a folder named `views` was created.
+1. Inside the **bucket** directory, a folder named **views** was created.
 
-2. Inside the `views` directory, the following were created:
+2. Inside the **views** directory, the following were created:
 
-    * a file called `index.handlebars`
-    * a directory named `layouts`
+    * a file called **index.handlebars**
+    * a directory named **layouts**
 
-3. Inside the `layouts` folder, a `main.handlebars` file was initialized.
+3. Inside the **layouts** folder, a **main.handlebars** file was initialized.
 
 4. Configuration of the handlebars files:
     
-        * `main.handlebars` was set up so it's able to be used by Handlebars:
+        * **main.handlebars** was set up so it's able to be used by Handlebars:
 ```
         ...
         <body>
@@ -247,7 +249,7 @@ delete: function(table, condition, cb) {
         </body>
         ...
 ```
-        * `index.handlebars` was set up to contain the template the Handlebars uses, *including* a button that submits the user's input into the database.
+        * **index.handlebars** was set up to contain the template that Handlebars uses, *including* a button that submits the user's input into the database.
 
 
 - - - 
