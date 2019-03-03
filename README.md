@@ -30,21 +30,21 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 1. `BucketList` GitHub repo was intialized.
 
-2. A *package.json* file was created by running `npm init`.
+2. A **package.json** file was created by running `npm init`.
 
-3. Installed the *Express npm package* using: `npm install express --save`.
+3. Installed the **Express npm package** using: `npm install express --save`.
 
-4. Created a *server.js* file (at root).
+4. Created a **server.js** file (at root).
 
-5. Installed the *Handlebars npm package* using: `npm install express-handlebars --save`.
+5. Installed the **Handlebars npm package** using: `npm install express-handlebars --save`.
 
-6. Installed the *method-override npm package* using: `npm install method-override --save`. *(This lets us use the DELETE method in the form tag's action attribute.)*
+6. Installed the **method-override npm package** using: `npm install method-override --save`. *(This lets us use the DELETE method in the form tag's action attribute.)*
 
-7. Installed the *body-parser npm package* using: `npm install body-parser --save`.
+7. Installed the **body-parser npm package** using: `npm install body-parser --save`.
 
-8. Installed *MySQL npm package* using: `npm install mysql --save`.
+8. Installed **MySQL npm package** using: `npm install mysql --save`.
 
-9. Required the following npm packages inside of the *server.js* file:
+9. Required the following npm packages inside of the **server.js** file:
    * *express*
    * *method-override*
    * *body-parser*
@@ -92,14 +92,14 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         database: "-------"
       });
     };
-```
+  ```
 
    * That new connection was then exported.
 
    ```
     // Export connection for ORM to use.
     module.exports = connection;
-```
+  ```
 
 
 3. An `orm.js` file was created inside the `config` directory.
