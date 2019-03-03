@@ -78,7 +78,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
    * Inside the `connection.js` file, code was set up to connect Node to MySQL.
    
-   ```
+```
     var mysql = require("mysql");
     var connection;
 
@@ -93,14 +93,14 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
       });
     };
 
-  ```
+```
 
    * That new connection was then exported.
 
-  ```
+```
     // Export connection for ORM to use.
     module.exports = connection;
-  ```
+```
 
 
 3. An `orm.js` file was created inside the `config` directory.
@@ -111,7 +111,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
      * `selectAll()` 
 
-    ```
+```
   all: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
@@ -121,10 +121,10 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
       cb(result);
     });
   },
-  ``` 
+``` 
      * `insertOne()` 
 
-  ```
+```
   create: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table;
 
@@ -145,10 +145,10 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
-  ```
+```
      * `updateOne()` 
 
-  ```
+```
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -166,11 +166,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
       cb(result);
     });
   },
-  ```
+```
 
   * I've also included a delete..
 
-  ```
+```
 delete: function(table, condition, cb) {
     var queryString = "DELETE FROM " + table;
     queryString += " WHERE ";
@@ -185,7 +185,7 @@ delete: function(table, condition, cb) {
       cb(result);
     });
   }
-  ```
+```
 
    * The ORM object was then exported in `module.exports`.
 
@@ -240,13 +240,13 @@ delete: function(table, condition, cb) {
 4. Configuration of the handlebars files:
     
         * `main.handlebars` was set up so it's able to be used by Handlebars:
-        ```
+```
         ...
         <body>
           {{{ body }}}
         </body>
         ...
-        ```
+```
         * `index.handlebars` was set up to contain the template the Handlebars uses, *including* a button that submits the user's input into the database.
 
 
