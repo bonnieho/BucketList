@@ -57,9 +57,9 @@ p {
 
 li { 
   font-family: 'Nothing You Could Do', cursive;
-  /* not bad, but hard ot read at small size
+  /* not bad, but hard to read at small size
     font-family: 'Caveat', cursive;
-  nice for CURSIVE handwriting, but hard to read at some size
+    nice for CURSIVE handwriting, but hard to read at some size
     font-family: 'Cedarville Cursive', cursive; */
   padding: 12px 12px;
   margin: 5px;
