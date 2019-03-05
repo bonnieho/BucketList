@@ -112,8 +112,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
      * `selectAll()` 
 
-```
-    
+```  
     all: function(tableInput, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
       connection.query(queryString, function(err, result) {
@@ -123,11 +122,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
-
-```  
-     * `insertOne()` 
 ```
-    
+
+     * `insertOne()` 
+
+```
     create: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table;
 
@@ -148,11 +147,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
+```
 
-```
      * `updateOne()` 
-```
-    
+
+``` 
     update: function(table, objColVals, condition, cb) {
       var queryString = "UPDATE " + table;
 
@@ -169,9 +168,10 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
-
 ```
-    * I've also included a delete..
+
+     * I've also included a delete...
+
 ```
     
     delete: function(table, condition, cb) {
