@@ -110,7 +110,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 	* In the **orm.js** file, methods were created that will execute the necessary MySQL commands in the controllers. (These are the methods that were used?) to retrieve and store data in the database.
 
-		* `selectAll()` 
+		* selectAll() 
 
 ```  
     all: function(tableInput, cb) {
@@ -124,7 +124,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
     },
 ```
 
-		* `insertOne()` 
+		* insertOne() 
 
 ```
     create: function(table, cols, vals, cb) {
