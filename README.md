@@ -233,11 +233,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
     };
 ```
 
-    * Included the export at the end of the **bucket.js** file.
+  * Included the export at the end of the **bucket.js** file.
 
 ```
-// Export the database functions for the controller. In this case, it's the bucket list controller.
-module.exports = bucket;
+    // Export the database functions for the controller. In this case, it's the bucket list controller.
+    module.exports = bucket;
 ```
 
 &#160;
