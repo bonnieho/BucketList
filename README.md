@@ -267,22 +267,23 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 2. Inside the **views** directory, the following were created:
 
-    * a file called **index.handlebars**
-    * a directory named **layouts**
+  * a file called **index.handlebars**
+  * a directory named **layouts**
 
 3. Inside the **layouts** folder, a **main.handlebars** file was initialized.
 
 4. Configuration of the handlebars files:
     
-    * **main.handlebars** was set up so it's able to be used by Handlebars:
+  * **main.handlebars** was set up so it's able to be used by Handlebars:
 ~~~~
-        ...
+      ...
         <body>
           {{{ body }}}
         </body>
-        ...
+      ...
 ~~~~
-    * **index.handlebars** was set up to contain the template that Handlebars uses, *including* a button that submits the user's input into the database.
+
+  * **index.handlebars** was set up to contain the template that Handlebars uses, *including* a button that submits the user's input into the database.
 
 
 - - - 
