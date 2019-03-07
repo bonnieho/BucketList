@@ -53,7 +53,7 @@ router.put("/:id", function(req, res) {
 router.delete("/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-console.log("I'm in bucketController.js now");
+  console.log("I'm in bucketController.js now");
   console.log("condition", condition);
 
   bucket.delete(condition, function() {

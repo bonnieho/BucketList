@@ -58,7 +58,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 2. In the **db** folder, a **schema.sql** file was created to initialize the one table (*bucket_list*) in this `bucket_db` database. The following SQL queries are contained in this schema file:
 
    * Created the `bucket_db`.
-   ```* Allows for switching to or using the `bucket_db`.```
+   `* Allows for switching to or using the `bucket_db`.`
    * Created a *bucket_list* table with these fields:
      * **id**: an auto incrementing int that serves as the primary key.
      * **item**: a string.
@@ -203,7 +203,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
     * Inside **bucket.js**, code was created that calls the ORM functions using input that's specific to bucket list tasks:
 
-~~~~
+  ~~~~
     // This creates functions that should connect w/DB.
     var orm = require("../config/orm.js");
 
@@ -231,14 +231,14 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         });
       }
     };
-~~~~
+  ~~~~
 
-  * Included the export at the end of the **bucket.js** file.
+    * Included the export at the end of the **bucket.js** file.
 
-~~~~
+  ~~~~
     // Export the database functions for the controller. In this case, it's the bucket list controller.
     module.exports = bucket;
-~~~~
+  ~~~~
 
 &#160;
 
@@ -247,14 +247,38 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 1. Inside the **bucket** directory, a folder named **controllers** was created.
 
-2. In **controllers**, a file called **bucket_controller.js** was created.
+2. In **controllers**, a file called **bucketController.js** was created.
 
-3. Inside the **bucket_controller.js** file, the following were imported:
+3. Inside the **bucketController.js** file, the following were imported:
 
-   * `Express`...
+   * **Express**
+   ~~~~
+    var express = require("express");
+    var router = express.Router();
+   ~~~~
    * **bucket.js**
+   ~~~~
+    // bucket.js needs to be imported to use DB functionality.
+    var bucket = require("../models/bucket.js");
+   ~~~~
 
 4. The **router** was then created for the app, and exported at the end of the file.
+    ~~~~
+    router.get("/", function(req, res) {
+      bucket.all(function(data) {
+      var hbsObject = {
+      bucket: data
+      };
+      console.log(hbsObject);
+      res.render("index", hbsObject);
+      });
+    });
+    
+      ... (router.post, put, update, and delete follow) ...
+
+    // server.js needs this exported.
+    module.exports = router;
+    ~~~~
 
 &#160;
 
@@ -275,16 +299,15 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 4. Configuration of the handlebars files:
     
     * **main.handlebars** was set up so it's able to be used by Handlebars:
-~~~~
+  ~~~~
       ...
         <body>
           {{{ body }}}
         </body>
       ...
-~~~~
+  ~~~~
 
     * **index.handlebars** was set up to contain the template that Handlebars uses, *including* a button that submits the user's input into the database.
-
 
 - - - 
 
@@ -338,9 +361,13 @@ The resulting files and directories make up the following structure:
 
 - - -
 
-MVPs to look at:
+MVPs I still need to look at:
 
-1. check vulnerable dependencies with Heroku (maybe look at what files do not need to be commited to GH)
+1. check vulnerable dependencies with Heroku 
+2. (maybe look at what files do not need to be commited to GH)
+    * screenshot
+    * db
+    * orm methods
 
 
 - - -

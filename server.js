@@ -23,7 +23,7 @@ querystring library` provides basic serialization/deserialization algorithm, the
 Both algorithms work exactly the same with flat data.
 
 Now, when you know pros and cons of both algorithms, it's up to you to decide which one suits your application better.
-Courtesy of StakOverflow post authored by Leonid Beschastny. */
+Courtesy of StackOverflow post authored by Leonid Beschastny. */
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
