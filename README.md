@@ -366,6 +366,7 @@ MVPs I still need to look at:
 1. check vulnerable dependencies with Heroku 
 2. (maybe look at what files do not need to be commited to GH)
     * screenshot
+    * method-override
     * db
     * orm methods
 
