@@ -187,7 +187,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
       });
     }
 ~~~~
-  * The ORM object was then exported in `module.exports`.
+    * The ORM object was then exported in `module.exports`.
 
 
 &#160;
