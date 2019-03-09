@@ -94,8 +94,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
       });
     };
 ```
-
-   * That new connection was then exported.
+    * That new connection was then exported.
 
 ```
     // Export connection for ORM to use.
