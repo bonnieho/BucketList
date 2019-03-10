@@ -125,7 +125,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
   * `insertOne()` 
 
-~~~~
+  ~~~~
     create: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table;
 
@@ -146,11 +146,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
-~~~~
+  ~~~~
 
   * `updateOne()` 
 
-~~~~
+  ~~~~
     update: function(table, objColVals, condition, cb) {
       var queryString = "UPDATE " + table;
 
@@ -167,11 +167,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
-~~~~
+  ~~~~
 
-  * I've also included a delete...
+    * I've also included a delete...
 
-~~~~ 
+  ~~~~ 
     delete: function(table, condition, cb) {
       var queryString = "DELETE FROM " + table;
       queryString += " WHERE ";
@@ -185,7 +185,8 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     }
-~~~~
+  ~~~~
+  
   * The ORM object was then exported in `module.exports`.
 
 
@@ -305,7 +306,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
   ~~~~
 
     * **index.handlebars** was set up to contain the template that Handlebars uses, *including* a button that submits the user's input into the database.
-* **main.handlebars** was set up so it's able to be used by Handlebars:
+
 - - - 
 
 
