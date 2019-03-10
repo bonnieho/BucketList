@@ -303,6 +303,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         </body>
       ...
   ~~~~
+
     * **index.handlebars** was set up to contain the template that Handlebars uses, *including* a button that submits the user's input into the database.
 
 - - - 
