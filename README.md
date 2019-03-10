@@ -109,9 +109,9 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
   * In the **orm.js** file, methods were created that will execute the necessary MySQL commands in the controllers. (These are the methods that were used?) to retrieve and store data in the database.
 
-  * `selectAll()` 
+    * `selectAll()` 
 
-~~~~ 
+    ~~~~ 
     all: function(tableInput, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
       connection.query(queryString, function(err, result) {
@@ -121,11 +121,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
-~~~~
+    ~~~~
 
-  * `insertOne()` 
+    * `insertOne()` 
 
-  ~~~~
+    ~~~~
     create: function(table, cols, vals, cb) {
       var queryString = "INSERT INTO " + table;
 
@@ -146,11 +146,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
-  ~~~~
+    ~~~~
 
-  * `updateOne()` 
-
-  ~~~~
+    * `updateOne()` 
+ 
+    ~~~~
     update: function(table, objColVals, condition, cb) {
       var queryString = "UPDATE " + table;
 
@@ -167,11 +167,11 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     },
-  ~~~~
+    ~~~~
 
     * I've also included a delete...
 
-  ~~~~ 
+    ~~~~ 
     delete: function(table, condition, cb) {
       var queryString = "DELETE FROM " + table;
       queryString += " WHERE ";
@@ -185,9 +185,9 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         cb(result);
       });
     }
-  ~~~~
+    ~~~~
   
-  * The ORM object was then exported in `module.exports`.
+    * The ORM object was then exported in `module.exports`.
 
 
 &#160;
@@ -203,7 +203,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
     * Inside **bucket.js**, code was created that calls the ORM functions using input that's specific to bucket list tasks:
 
-  ~~~~
+    ~~~~
     // This creates functions that should connect w/DB.
     var orm = require("../config/orm.js");
 
@@ -231,12 +231,14 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         });
       }
     };
-  ~~~~
+    ~~~~
+
     * Included the export at the end of the **bucket.js** file.
-  ~~~~
+
+    ~~~~
     // Export the database functions for the controller. In this case, it's the bucket list controller.
     module.exports = bucket;
-  ~~~~
+    ~~~~
 
 &#160;
 
@@ -297,13 +299,14 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 4. Configuration of the handlebars files:
     
     * **main.handlebars** was set up so it's able to be used by Handlebars:
-  ~~~~
+    
+    ~~~~
       ...
         <body>
           {{{ body }}}
         </body>
       ...
-  ~~~~
+    ~~~~
 
     * **index.handlebars** was set up to contain the template that Handlebars uses, *including* a button that submits the user's input into the database.
 
