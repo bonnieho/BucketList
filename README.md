@@ -79,7 +79,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
    * Inside the **connection.js** file, code was set up to connect Node to MySQL.
    
-```
+    ~~~~
     var mysql = require("mysql");
     var connection;
 
@@ -93,7 +93,8 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
         database: "-------"
       });
     };
-```
+    ~~~~
+    
     * That new connection was then exported.
 
 ```
