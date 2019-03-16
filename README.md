@@ -108,7 +108,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
   * The **connection.js** was set as a required import into **orm.js** file.
 
-  * In the **orm.js** file, methods were created that will execute the necessary MySQL commands in the controllers. These are the methods that were used to retrieve and store data in the database.
+  * In the **orm.js** file, methods were created that execute the necessary MySQL commands in the controllers. These are the methods that were used to retrieve and store data in the database.
 
     * `selectAll()` 
 
