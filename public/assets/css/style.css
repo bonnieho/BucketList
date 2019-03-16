@@ -1,54 +1,41 @@
 /* The following styles are homegrown; intended to supplement Bootstrap's CDN content with my own customization. */
 
-
-/* <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Caveat|Cedarville+Cursive|La+Belle+Aurore|Nothing+You+Could+Do" rel="stylesheet">
-font-family: 'Nothing You Could Do', cursive;
-font-family: 'Caveat', cursive;
-font-family: 'Cedarville Cursive', cursive;
-*/
 body {
-  color: #333;
-  margin-bottom: 48px;
-  background-image: url(../images/cork-board.jpg);
+	color: #666;
+	font-family: 'IM Fell DW Pica';
+	margin-bottom: 48px;
+	background-image: url(../images/White-handmade-paper-texture-or-background-Stock-Photo.jpg);
   /* the following prevents the horizontal scroll bar */
   overflow-x: hidden;
 }
 
 h1, h2 {
-  font-family: 'Cutive Mono', monospace;
-  letter-spacing: -3px;
-  font-weight: bold;
-  text-align: center;
+	font-family: 'IM Fell DW Pica';
+	text-align: center;
+	 /* font-family: 'Goudy Bookletter 1911', serif; 
+    font-family: 'IM Fell DW Pica', serif; kind of pirate-y
+    font-family: 'IM Fell DW Pica SC', serif; OLDER kind of pirate-y 
+    font-family: 'IM Fell Double Pica', serif; brighter, cleaner 
+    font-family: 'IM Fell English SC', serif; REALLY pirate-y smallcaps */
 }
 
 h1 {
-  font-size: 400%;
+	font-size: 400%;
 }
 
 
 p {
-  text-align: center;
+	text-align: center;
 }
 
 
 .ital {
-  font-style: italic;
+	font-style: italic;
 }
 
 .footer {
-  font-family: 'IM Fell DW Pica';
-  font-size: 80%;
-  padding-top: 2em;
+	font-size: 80%;
   padding-bottom: 1em;
-  background-image: url(/assets/images/notebook_paper_halfwide.png);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.4);
-}
-
-.notebook {
-  padding-bottom: 1em;
-  /* background-color: #fff; */
-  background-image: url(/assets/images/notebook_paper_halfwide.png);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.4);
 }
 
 .col-heavy {
@@ -58,23 +45,13 @@ p {
 
 /* the list items are what makes up the form-group divs belows */
 
-
 li { 
-  font-family: 'Nothing You Could Do', cursive;
-  /* not bad, but hard to read at small size
-    font-family: 'Caveat', cursive;
-    nice for CURSIVE handwriting, but hard to read at some size
-    font-family: 'Cedarville Cursive', cursive; */
-  padding: 12px 12px;
+  padding: 12px;
   margin: 5px;
-  margin-bottom: 1em;
-  border: 1px solid #e6d705;
-  border-top: 1px solid #fdf79b;
-  border-right: 1px solid #fdf79b;
-  font-size: 150%;
+  /* background: #faebd7;  kind of a peachy color */
+  border: 1px solid #ccc;
+  font-size: 120%;
   background-color: #fff;
-  background-color: #fef9b5;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.14);
 }
 
 
@@ -83,28 +60,18 @@ li {
 
 .form-group {
   margin-bottom: 6px;
-  font-family: 'Cutive Mono', monospace;
-  letter-spacing: -1px;
   font-size: 120%;
-  background-color: #fef9b5;
-}
-
-.form-group input {
-  font-family: 'Nothing You Could Do', cursive;
-  font-size: 150%;
+  background-color: #fff;
 }
 
 .form-group li {
- font-size: 120%;
- padding: 12px 0;
+  font-size: 120%;
+  padding: 12px 0;
 }
 
 .item button {
   display: inline;
-  font-family: 'Cutive Mono', monospace;
-  letter-spacing: -1px;
   font-size: 80%;
-  margin-top: 12px;
 }
 
 /* ==== END form-group  ===== */
@@ -115,28 +82,19 @@ li {
 /* =====  This class is for the new bucket item ENTRY section  ====== */
 
 .create-update-form {
-    /* width: 80%; */
   padding: 12px 12px 12px 24px;
-  margin: 12px 6px;
-  /* slightly darker canary FDF79B */
-  /* even darker canary e6d705 */
-  border: 1px solid #e6d705;
-  border-top: 1px solid #fdf79b;
-  border-right: 1px solid #fdf79b;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.14);
-  background-color: #fef9b5;
+  margin: 6px;
+  /* background: aqua; */
+  border: 2px solid #ccc;
+  background-color: #fff;
 }
 
 .create-update-form button {
-  font-family: 'Cutive Mono', monospace;
-  letter-spacing: -1px;
-  font-size: 120%;
-  margin-top: 12px;
+	font-size: 120%;
 }
 
 label {
-  font-family: 'Cutive Mono', monospace;
-  font-weight: normal;
+	font-weight: normal;
 }
 
 /* ==== END create-update-form  ===== */
@@ -154,64 +112,65 @@ label {
 
     /* Custom, iPhone Retina */ 
     @media only screen and (min-width : 320px) {
-      .row-top {
-        min-height: 54px;
-      }
+		.row-top {
+			min-height: 54px;
+		}
     }
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (min-width : 480px) {
-      .row-top {
-        min-height: 86px;
-      }
+		.row-top {
+			min-height: 86px;
+		}
     }
 
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) {
-      .row-top {
-        min-height: 128px;
-      }
+		.row-top {
+			min-height: 128px;
+		}
     }
 
     /* Medium Devices, Desktops */
     @media only screen and (min-width : 992px) {
-    /* already ok at this size */
+		/* already ok at this size */
     }
 
     /* Large Devices, Wide Screens */
     @media only screen and (min-width : 1200px) {
-    /* already this size */
+		/* already this size */
     }
 
     /*==========  Non-Mobile First Method  ==========*/
 
     /* Large Devices, Wide Screens */
     @media only screen and (max-width : 1200px) {
-    /* already ok at this size */
+		/* already ok at this size */
     }
 
     /* Medium Devices, Desktops */
     @media only screen and (max-width : 992px) {
-    /* already this size */
+		/* already this size */
     }
 
     /* Small Devices, Tablets */
     @media only screen and (max-width : 768px) {
-      .row-top {
-        min-height: 128px;
-      }
+		.row-top {
+			min-height: 128px;
+		}
     }
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 480px) {
-      .row-top {
-        min-height: 86px;
-      }
+		.row-top {
+			min-height: 86px;
+		}
     }
 
     /* Custom, iPhone Retina */ 
     @media only screen and (max-width : 320px) {
-      .row-top {
-        min-height: 54px;
-      }
-}
+		.row-top {
+			min-height: 54px;
+		}
+    }
+
