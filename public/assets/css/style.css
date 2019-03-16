@@ -97,6 +97,10 @@ label {
 	font-weight: normal;
 }
 
+legend {
+  display: none;
+}
+
 /* ==== END create-update-form  ===== */
 
 
