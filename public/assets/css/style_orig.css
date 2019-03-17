@@ -1,0 +1,180 @@
+/* The following styles are homegrown; intended to supplement Bootstrap's CDN content with my own customization. */
+
+body {
+	color: #666;
+	font-family: 'IM Fell DW Pica';
+	margin-bottom: 48px;
+	background-image: url(../images/White-handmade-paper-texture-or-background-Stock-Photo.jpg);
+  /* the following prevents the horizontal scroll bar */
+  overflow-x: hidden;
+}
+
+h1, h2 {
+	font-family: 'IM Fell DW Pica';
+	text-align: center;
+	 /* font-family: 'Goudy Bookletter 1911', serif; 
+    font-family: 'IM Fell DW Pica', serif; kind of pirate-y
+    font-family: 'IM Fell DW Pica SC', serif; OLDER kind of pirate-y 
+    font-family: 'IM Fell Double Pica', serif; brighter, cleaner 
+    font-family: 'IM Fell English SC', serif; REALLY pirate-y smallcaps */
+}
+
+h1 {
+	font-size: 400%;
+}
+
+
+p {
+	text-align: center;
+}
+
+
+.ital {
+	font-style: italic;
+}
+
+.footer {
+	font-size: 80%;
+  padding-bottom: 1em;
+}
+
+.col-heavy {
+  margin-bottom: 36px;
+}
+
+
+/* the list items are what makes up the form-group divs belows */
+
+li { 
+  padding: 12px;
+  margin: 5px;
+  /* background: #faebd7;  kind of a peachy color */
+  border: 1px solid #ccc;
+  font-size: 120%;
+  background-color: #fff;
+}
+
+
+
+/* =====  This class holds all of the list items for "left to do", "done", and "do it again" item groupings  ===== */
+
+.form-group {
+  margin-bottom: 6px;
+  font-size: 120%;
+  background-color: #fff;
+}
+
+.form-group li {
+  font-size: 120%;
+  padding: 12px 0;
+}
+
+.item button {
+  display: inline;
+  font-size: 80%;
+}
+
+/* ==== END form-group  ===== */
+
+
+
+
+/* =====  This class is for the new bucket item ENTRY section  ====== */
+
+.create-update-form {
+  padding: 12px 12px 12px 24px;
+  margin: 6px;
+  /* background: aqua; */
+  border: 2px solid #ccc;
+  background-color: #fff;
+}
+
+.create-update-form button {
+	font-size: 120%;
+}
+
+label {
+	font-weight: normal;
+}
+
+legend {
+  display: none;
+}
+
+/* ==== END create-update-form  ===== */
+
+
+
+
+
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+		.row-top {
+			min-height: 54px;
+		}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+		.row-top {
+			min-height: 86px;
+		}
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+		.row-top {
+			min-height: 128px;
+		}
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+		/* already ok at this size */
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+		/* already this size */
+    }
+
+    /*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+		/* already ok at this size */
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+		/* already this size */
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+		.row-top {
+			min-height: 128px;
+		}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+		.row-top {
+			min-height: 86px;
+		}
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+		.row-top {
+			min-height: 54px;
+		}
+    }
+
