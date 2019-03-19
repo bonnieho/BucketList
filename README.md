@@ -58,7 +58,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 2. In the **db** folder, a **schema.sql** file was created to initialize the one table (*bucket_list*) in this `bucket_db` database. The following SQL queries are contained in this schema file:
 
    * Created the `bucket_db`.
-   `* switch to or using the `bucket_db`.`
+   * switch to or using the `bucket_db`.
    * Created a *bucket_list* table with these fields:
      * **id**: an auto incrementing int that serves as the primary key.
      * **item**: a string.
@@ -104,13 +104,13 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 &#160;
 
-3. An **orm.js** file was created inside the **config** directory.
+3. An **orm.js** file was also created inside the **config** directory.
 
   * The **connection.js** was set as a required import into **orm.js** file.
 
   * In the **orm.js** file, methods were created that execute the necessary MySQL commands in the controllers. These are the methods that were used to retrieve and store data in the database.
 
-    * `selectAll()` 
+    * **`selectAll()`**
 
     ~~~~ 
     all: function(tableInput, cb) {
@@ -124,7 +124,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
     },
     ~~~~
 
-    * `insertOne()` 
+    * **`insertOne()`**
 
     ~~~~
     create: function(table, cols, vals, cb) {
@@ -149,7 +149,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
     },
     ~~~~
 
-    * `updateOne()` 
+    * **`updateOne()`**
  
     ~~~~
     update: function(table, objColVals, condition, cb) {
@@ -170,7 +170,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
     },
     ~~~~
 
-    * I've also included a delete...
+    * I've also included a **delete**...
 
     ~~~~ 
     delete: function(table, condition, cb) {
@@ -266,13 +266,13 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 4. The **router** was then created for the app, and exported at the end of the file.
     ~~~~
     router.get("/", function(req, res) {
-      bucket.all(function(data) {
-      var hbsObject = {
-      bucket: data
-      };
-      console.log(hbsObject);
-      res.render("index", hbsObject);
-      });
+            bucket.all(function(data) {
+                  var hbsObject = {
+                        bucket: data
+                  };
+                  console.log(hbsObject);
+                  res.render("index", hbsObject);
+            });
     });
     
       ... (router.post, put, update, and delete follow) ...
@@ -368,8 +368,8 @@ MVPs I still need to look at:
 1. check vulnerable dependencies with Heroku 
 2. (maybe look at what files do not need to be commited to GH)
     * screenshot
-    * ( method-override ? )
-    * ( db ? )
+    * ( db ? ) line 61
+    * orm object code? line 191
 
 - - -
 
