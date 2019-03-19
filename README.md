@@ -188,7 +188,7 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
     }
     ~~~~
   
-    * The ORM object was then exported in `module.exports`.
+    * The ORM object was then exported for **bucket.js** using `module.exports`.
 
 
 &#160;
@@ -266,13 +266,13 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 4. The **router** was then created for the app, and exported at the end of the file.
     ~~~~
     router.get("/", function(req, res) {
-            bucket.all(function(data) {
-                  var hbsObject = {
-                        bucket: data
-                  };
-                  console.log(hbsObject);
-                  res.render("index", hbsObject);
-            });
+      bucket.all(function(data) {
+        var hbsObject = {
+          bucket: data
+        };
+        console.log(hbsObject);
+        res.render("index", hbsObject);
+      });
     });
     
       ... (router.post, put, update, and delete follow) ...
