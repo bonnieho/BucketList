@@ -5,7 +5,7 @@ Published site: [https://bonnieho-bucketlist.herokuapp.com/](https://bonnieho-bu
 
 ### Overview
 
-The original assigned task was to create a "burger logger" (WTH?!?) to enter a customized burger into a list and then have whichever burger you specify to be "devoured" (read: being transfered to an "eaten" list). This was to be done through the use of Node and mySQL to route that data and update the underlying database. No html files were to be harmed as Handlebars is the technology called upon to render the resulting pages based on a series of templates as linked views.
+The original assigned task was to create a "burger logger" (WTH?!?) to enter a customized burger into a list and then have whichever burger you specify to be "devoured" (read: being transfered to an "eaten" list). This was to be done through the use of Node and mySQL to route that data and update the underlying database. No html files are harmed as Handlebars is the technology called upon to render the resulting pages based on a series of templates as linked views.
 
 Since the entire cohort was tasked with this same exercise, I wanted to have something more unique to show as exemplary of my ability to implement the same MVC design patten using the homegrown ORM needed for this assignment. So, I improvised and applied the same requirements into a different type of list to categorize - a "bucket" list.
 
@@ -14,9 +14,9 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 * BucketList is a listing app that lets users input items that they'd like to accomplish at some point in their lives.
 
-* When a user submits an item that they'd like to accomplish, it will display that task on the left side of the page in a container labeled "What's still to do", waiting to be accomplished.
+* When a user submits an item that they'd like to accomplish, it displays that task on the left side of the page in a container labeled "What's still to do", waiting to be accomplished.
 
-* Each task in the Bucket List area also has a `Done!` button. When the user clicks it, the item will move to the right side of the page, into a list of completed tasks (a container labeled "Stuff I've done").
+* Each task in the Bucket List area also has a `Done!` button. When the user clicks it, the item moves over to the right side of the page into a list of completed tasks (a container labeled "Stuff I've done").
 
 * The app stores every task in a database, whether completed or not.
 
@@ -58,7 +58,16 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 2. In the **db** folder, a **schema.sql** file was created to initialize the one table (*bucket_list*) in this `bucket_db` database. The following SQL queries are contained in this schema file:
 
    * Created the `bucket_db`.
-   * switch to or using the `bucket_db`.
+      ~~~
+      DROP DATABASE IF EXISTS bucket_db;
+      CREATE DATABASE bucket_db;
+      ~~~
+
+   * configured db to switch to (or otherwise use) the `bucket_db`.
+      ~~~
+      USE bucket_db;
+      ~~~
+
    * Created a *bucket_list* table with these fields:
      * **id**: an auto incrementing int that serves as the primary key.
      * **item**: a string.
@@ -368,8 +377,6 @@ MVPs I still need to look at:
 1. check vulnerable dependencies with Heroku 
 2. (maybe look at what files do not need to be commited to GH)
     * screenshot
-    * ( db ? ) line 61
-    * orm object code? line 191
 
 - - -
 
