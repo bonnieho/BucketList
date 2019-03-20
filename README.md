@@ -57,13 +57,13 @@ Since the entire cohort was tasked with this same exercise, I wanted to have som
 
 2. In the **db** folder, a **schema.sql** file was created to initialize the one table (*bucket_list*) in this `bucket_db` database. The following SQL queries are contained in this schema file:
 
-   * Created the `bucket_db`.
+   * Created the `bucket_db`:
       ~~~
       DROP DATABASE IF EXISTS bucket_db;
       CREATE DATABASE bucket_db;
       ~~~
 
-   * configured db to switch to (or otherwise use) the `bucket_db`.
+   * Configured db to switch to (or otherwise use) the `bucket_db`:
       ~~~
       USE bucket_db;
       ~~~
@@ -376,7 +376,7 @@ MVPs I still need to look at:
 
 1. check vulnerable dependencies with Heroku 
 2. (maybe look at what files do not need to be commited to GH)
-    * screenshot
+    * screenshot(s?)
 
 - - -
 
